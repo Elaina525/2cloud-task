@@ -1,56 +1,80 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import FaChevronDown from "react-icons/fa";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Subcomponent 1: Floating Products
 const Hero1 = () => (
-  <section className="flex items-center justify-center bg-[#A8D8EE] min-h-[500px] w-full text-center">
-    <div className="text-black">
-      <p className="text-3xl lg:text-5xl font-bold">
-        I&apos;m looking for branded <span className="text-blue-600">bags ⌄</span>
-        <br />
-        required within <span className="text-blue-600">2 weeks ⌄</span>
-      </p>
-      <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold">
-        FIND PRODUCTS
-      </button>
-    </div>
-  </section>
-);
-
-// Subcomponent 2: Left Text - Right Image
-const Hero2 = () => (
-  <section className="flex items-center justify-center bg-[#A8D8EE] min-h-[500px] w-full">
-    <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center">
-      <div className="text-black max-w-lg text-left">
-        <h1 className="text-4xl lg:text-6xl font-bold">Punchy Promotional Products 🥊</h1>
-        <p className="mt-4 text-lg">
-          Trusted by Aussie and Global brands with their most valuable asset - their brand.
-        </p>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold">
-          VIEW BAG RANGE
-        </button>
+    <section className="flex min-h-[500px] w-full">
+      {/* Left Background Image */}
+      <div
+        className="w-1/4 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero1.jpg')", backgroundPosition: 'right' }}
+      />
+  
+      {/* Center Solid Color */}
+      <div className="w-1/2 bg-hero-blue flex items-center justify-center text-center py-4">
+            <div className="text-black">
+            <p className="text-3xl lg:text-5xl font-bold">
+                I'm looking for branded 
+                <br/>
+                <span className="text-header-blue">bags</span>
+                <br />
+                required within
+                <br/>
+                <span className="text-header-blue">2 weeks</span>
+            </p>
+            <button className="bg-header-blue text-white px-6 py-3 mt-6 rounded-lg font-semibold">
+                FIND PRODUCTS
+            </button>
+            </div>
       </div>
-      <img src="/bag-promo.png" alt="Promotional Bags" className="max-w-lg w-full lg:w-1/2" />
+  
+      {/* Right Background Image */}
+      <div
+        className="w-1/4 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero1.jpg')", backgroundPosition: 'left' }}
+      />
+    </section>
+  );
+    
+const Hero2 = () => (
+    <section
+    className="flex items-center justify-left bg-cover bg-center min-h-[500px] w-full text-center"
+    style={{ backgroundImage: "url('/hero2.jpg')" }}
+  >
+    <div className="container mx-auto px-6 lg:px-4 flex flex-col lg:flex-row items-center">
+        <div className="text-white max-w-sm text-left">
+            <h1 className="text-4xl lg:text-6xl font-bold">Punchy Promotional Products 🥊</h1>
+            <p className="mt-4 text-lg">
+            Trusted by Aussie and Global brands with their most valuable asset - their brand.
+            </p>
+            <button className="bg-header-blue hover:bg-blue-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold">
+            VIEW BAG RANGE
+            </button>
+        </div>
     </div>
   </section>
 );
 
-// Subcomponent 3: Right Text - Left Image
 const Hero3 = () => (
-  <section className="flex items-center justify-center bg-[#93D798] min-h-[500px] w-full">
-    <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center">
-      <img src="/eco-friendly.png" alt="Eco-Friendly" className="max-w-lg w-full lg:w-1/2" />
-      <div className="text-black max-w-lg text-left lg:ml-10">
-        <h1 className="text-4xl lg:text-6xl font-bold">It&apos;s Good to be green</h1>
+    <section
+    className="flex items-center justify-center bg-cover bg-center min-h-[500px] w-full text-center"
+    style={{ backgroundImage: "url('/hero3.jpg')" }}
+  >
+    <div className="container mx-auto px-6 lg:px-60 flex flex-col lg:flex-row items-center">
+      <div className="text-black max-w-sm text-left lg:ml-10">
+        <h1 className="text-4xl lg:text-6xl font-bold">It&apos;s <span className="text-header-green">Good </span>
+            <br/>
+            to be green</h1>
         <p className="mt-4 text-lg">
-          We&apos;re a member of <span className="text-blue-600">1% for the Planet</span> for our{" "}
-          <span className="text-blue-600">Good Range</span> of products, donating 1% of sales to environmental partners.
+          We&apos;re a member of <span className="text-header-blue">1% for the Planet</span> for our{" "}
+          <span className="text-header-blue">Good Range</span> of products, donating 1% of sales to environmental partners.
         </p>
-        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold">
+        <button className="bg-header-green hover:bg-green-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold">
           Browse the Good Range
         </button>
       </div>
@@ -58,7 +82,6 @@ const Hero3 = () => (
   </section>
 );
 
-// Main Hero Component (Swiper with subcomponents)
 export default function Hero() {
   return (
     <Swiper
