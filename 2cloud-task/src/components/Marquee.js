@@ -12,7 +12,7 @@ const logos = [
 
 const LogoMarquee = () => {
   return (
-    <div className="bg-gray-100 py-4">
+    <div className="bg-white py-4">
       <Marquee speed={50} gradient={false} autoFill={true}>
         {logos.map((logo, index) => (
           <div

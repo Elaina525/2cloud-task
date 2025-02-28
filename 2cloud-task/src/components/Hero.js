@@ -1,8 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import FaChevronDown from "react-icons/fa";
-
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,7 +16,7 @@ const Hero1 = () => (
       {/* Center Solid Color */}
       <div className="w-1/2 bg-hero-blue flex items-center justify-center text-center py-4">
             <div className="text-black">
-            <p className="text-3xl lg:text-5xl font-bold">
+            <p className="text-3xl lg:text-4xl font-bold">
                 I'm looking for branded 
                 <br/>
                 <span className="text-header-blue">bags</span>
@@ -85,8 +83,7 @@ const Hero3 = () => (
 export default function Hero() {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      navigation
+      modules={[Pagination, Autoplay]}
       pagination={{ clickable: true }}
       autoplay={{ delay: 5000 }}
       loop={true}

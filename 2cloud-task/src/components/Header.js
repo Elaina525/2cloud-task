@@ -2,12 +2,12 @@ import { FaSearch, FaChevronDown } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className="">
+    <header className="fixed top-0 left-0 w-full z-50">
       {/* Green Announcement Bar */}
       <div className="bg-header-green text-white text-sm flex justify-between items-center px-20 py-2">
         <a href="#" className="flex font-semibold items-center hover:underline">
-          <img src="/aus-shape.png" alt="Australian Flag" className="w-8 h-7" />
-          Australian-Owned
+          <img src="/aus.svg" alt="Australian Flag" className="w-5 h-4.5" />
+           Australian-Owned
         </a>
 
         <div className="flex-1 flex justify-center">
