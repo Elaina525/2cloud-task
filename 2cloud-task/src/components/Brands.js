@@ -75,7 +75,10 @@ const Brands = () => {
   return (
     <div className="w-full mx-auto py-15 bg-gray-50">
       <div className="flex items-center justify-between w-full mb-4 px-4">
-        <button onClick={handlePrev} className="text-gray-600 hover:text-gray-800 transition">
+        <button
+          onClick={handlePrev}
+          className="text-gray-600 hover:text-gray-800 transition"
+        >
           <FaChevronLeft size={20} />
         </button>
 
@@ -83,7 +86,10 @@ const Brands = () => {
           TRUSTED BY 3000+ BRANDS
         </h2>
 
-        <button onClick={handleNext} className="text-gray-600 hover:text-gray-800 transition">
+        <button
+          onClick={handleNext}
+          className="text-gray-600 hover:text-gray-800 transition"
+        >
           <FaChevronRight size={20} />
         </button>
       </div>
@@ -98,7 +104,7 @@ const Brands = () => {
             480: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 }
+            1280: { slidesPerView: 4 },
           }}
         >
           {brandData.map((brand, index) => (
@@ -111,10 +117,16 @@ const Brands = () => {
                 />
                 <div className="p-2 sm:p-3 md:p-4 text-black flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-xl sm:text-lg md:text-2xl">{brand.title}</h3>
+                    <h3 className="font-semibold text-xl sm:text-lg md:text-2xl">
+                      {brand.title}
+                    </h3>
                     <p className="text-sm sm:text-md">{brand.subtitle}</p>
                   </div>
-                  <img src={brand.logo} alt={`${brand.title} logo`} className="h-12 sm:h-10 md:h-16" />
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.title} logo`}
+                    className="h-12 sm:h-10 md:h-16"
+                  />
                 </div>
               </div>
             </SwiperSlide>
@@ -146,10 +158,16 @@ const Brands = () => {
                 />
                 <div className="p-2 sm:p-3 md:p-4 text-black flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-xl sm:text-lg md:text-2xl">{brand.title}</h3>
+                    <h3 className="font-semibold text-xl sm:text-lg md:text-2xl">
+                      {brand.title}
+                    </h3>
                     <p className="text-sm sm:text-md">{brand.subtitle}</p>
                   </div>
-                  <img src={brand.logo} alt={`${brand.title} logo`} className="h-12 sm:h-10 md:h-16" />
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.title} logo`}
+                    className="h-12 sm:h-10 md:h-16"
+                  />
                 </div>
               </div>
             </SwiperSlide>

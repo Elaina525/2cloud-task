@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Header from "@/components/Header"
-import Hero from "@/components/Hero"
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import LogoMarquee from "@/components/Marquee";
 import Brands from "@/components/Brands";
 import Categories from "@/components/Categories";
@@ -15,18 +15,18 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="pt-30">
-      <Header/>
-      <Hero/>
-      <LogoMarquee/>
-      <Brands/>
-      <Categories/>
-      <About/>
-      <Goals/>
-      <Experience/>
-      <Steps/>
-      <Blog/>
-      <Awards/>
-      <Footer/>
+      <Header />
+      <Hero />
+      <LogoMarquee />
+      <Brands />
+      <Categories />
+      <About />
+      <Goals />
+      <Experience />
+      <Steps />
+      <Blog />
+      <Awards />
+      <Footer />
     </main>
   );
 }
