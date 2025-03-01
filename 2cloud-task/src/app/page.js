@@ -4,6 +4,7 @@ import Hero from "@/components/Hero"
 import LogoMarquee from "@/components/Marquee";
 import Brands from "@/components/Brands";
 import Categories from "@/components/Categories";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <LogoMarquee/>
     <Brands/>
     <Categories/>
+    <About/>
     </main>
   );
 }

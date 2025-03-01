@@ -74,7 +74,6 @@ const Brands = () => {
 
   return (
     <div className="w-full mx-auto py-15 bg-gray-50">
-      {/* Header Section */}
       <div className="flex items-center justify-between w-full mb-4 px-4">
         <button onClick={handlePrev} className="text-gray-600 hover:text-gray-800 transition">
           <FaChevronLeft size={20} />
@@ -89,20 +88,18 @@ const Brands = () => {
         </button>
       </div>
 
-      {/* First Swiper */}
-      <div className="pb-6">
+      <div className="pb-5">
         <Swiper
           ref={sliderRef1}
           modules={[Navigation]}
-          spaceBetween={10} // Reduce space between cards for better responsiveness
+          spaceBetween={20}
           slidesPerGroup={2}
           breakpoints={{
-            480: { slidesPerView: 1 }, // 1 card per row on small screens
-            768: { slidesPerView: 2 }, // 2 cards per row on tablets
-            1024: { slidesPerView: 3 }, // 3 cards per row on medium screens
-            1280: { slidesPerView: 4 }, // 4 cards per row on large screens
+            480: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 }
           }}
-          className="ml-6"
         >
           {brandData.map((brand, index) => (
             <SwiperSlide key={index} className="flex flex-col">
@@ -125,12 +122,11 @@ const Brands = () => {
         </Swiper>
       </div>
 
-      {/* Second Swiper */}
       <div>
         <Swiper
           ref={sliderRef2}
           modules={[Navigation]}
-          spaceBetween={10} // Reduce spacing for better scaling
+          spaceBetween={20}
           slidesPerGroup={2}
           initialSlide={2}
           breakpoints={{
@@ -139,7 +135,6 @@ const Brands = () => {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          className="pb-6 mt-[-40px]" // Moves second swiper up slightly for staggered effect
         >
           {brandData.map((brand, index) => (
             <SwiperSlide key={index} className="flex flex-col">

@@ -58,7 +58,7 @@ export default function Categories() {
             alt="Custom Merch"
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 w-full bg-blue-300 text-white p-2 text-sm font-bold">
+          <div className="absolute bottom-0 left-0 w-full bg-blue-300 text-black p-2 text-sm font-bold">
             Custom Merch
           </div>
         </div>
