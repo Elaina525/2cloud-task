@@ -147,6 +147,59 @@ export default function Header() {
                     </button>
                 </div>
             </div>
+            {isMenuOpen && (
+        <div className="fixed inset-0 bg-header-blue text-white px-6 py-6 z-50 overflow-y-auto transition-transform transform animate-fade-in">
+          {/* Top Row: Logo & Close Button */}
+          <div className="flex justify-between items-center mb-6">
+            <img src="logo.svg" className="max-h-8" />
+            <button onClick={() => setIsMenuOpen(false)}>
+              <FaTimes size={26} />
+            </button>
+          </div>
+
+          {/* Made to Order Merch Section */}
+          <div className="bg-blue-400 p-6 rounded-lg mb-6">
+            <h3 className="text-lg font-bold">Made to order merch</h3>
+            <p className="text-sm mt-2">
+              Completely custom made to your exact size, colour, and specifications. Choose Made to Order when volumes are higher and delivery date is &gt; 8 weeks for maximum impact.
+            </p>
+            <a href="#" className="block mt-4 font-bold hover:underline">BROWSE PORTFOLIO →</a>
+          </div>
+
+          {/* Product Categories */}
+          <h3 className="text-lg font-bold mb-4">All Off The Shelf Products</h3>
+          <div className="grid grid-cols-2 gap-y-3">
+            {[
+              "The good range",
+              "Bags",
+              "Caps & Hats",
+              "Clothing & Apparel",
+              "Confectionery",
+              "Conferences & Events",
+              "Drink Bottles",
+              "Eco Friendly",
+              "Giveaways",
+              "Keyrings",
+              "Mugs",
+              "Outdoor",
+              "Packaging",
+              "Pens & Stationery",
+              "Technology",
+              "Umbrellas",
+            ].map((category, index) => (
+              <a key={index} href="#" className="hover:underline">
+                {category}
+              </a>
+            ))}
+          </div>
+
+          {/* Bottom Links */}
+          <div className="mt-6 border-t border-white pt-4">
+            <a href="#" className="block font-bold hover:underline">About</a>
+            <a href="#" className="block font-bold hover:underline">Portfolio</a>
+          </div>
+        </div>
+      )}
         </header>
     );
 }
