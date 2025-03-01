@@ -1,10 +1,8 @@
 export default function Footer() {
     return (
         <footer className="bg-header-blue text-white px-6 lg:px-20 py-12">
-            {/* Top Section - Links & Contact Form */}
             <div className="grid grid-cols-3 md:grid-cols-4 gap-10">
                 
-                {/* Company Links */}
                 <div className="max-w-xs sm:max-w-sm">
                     <h3 className="text-gray-300 uppercase font-semibold mb-4">Company</h3>
                     <ul className="space-y-2">
@@ -14,7 +12,6 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                {/* Resources */}
                 <div className="max-w-xs sm:max-w-sm">
                     <h3 className="text-gray-300 uppercase font-semibold mb-4">Resources</h3>
                     <ul className="space-y-2">
@@ -24,7 +21,6 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                {/* Help and Support */}
                 <div className="max-w-xs sm:max-w-sm">
                     <h3 className="text-gray-300 uppercase font-semibold mb-4">Help and Support</h3>
                     <ul className="space-y-2">
@@ -56,14 +52,12 @@ export default function Footer() {
 
             </div>
 
-            {/* Bottom Section */}
             <div className="border-t border-blue-400 mt-12 pt-6 flex flex-col items-start sm:flex-row sm:items-center justify-between">
                 <div className="flex-col">
                     <img src="logo-white.svg" className="w-40"/>
                     <p className="text-white font-semibold">© 2025 Good Things Australia Pty Ltd</p>
                 </div>
 
-                {/* Social Media Icons */}
                 <div className="flex gap-4 mt-4 md:mt-0">
                     {["instagram-white", "linkedin-white", "facebook-white", "tiktok-white", "youtube-white"].map((icon, index) => (
                         <img key={index} src={`/${icon}.svg`} alt={icon} className="w-6 h-6 cursor-pointer" />

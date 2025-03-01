@@ -1,10 +1,8 @@
 export default function About() {
     return (
       <div className="bg-gray-100 px-4 sm:px-10 lg:px-20 py-15">
-        {/* Responsive Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left text-black">
           
-          {/* Why Choose Us - Large Block (Spans 2 cols on md+) */}
           <div className="bg-about-green flex flex-col p-10 text-lg font-bold rounded-lg md:col-span-2 md:row-span-2">
             <h3 className="text-3xl pt-10 pb-8">Why choose Good Things?</h3>
             <p className="pb-6">
@@ -18,7 +16,6 @@ export default function About() {
             </button>
           </div>
   
-          {/* Testimonial Section */}
           <div className="bg-about-purple flex flex-col p-8 text-lg font-bold rounded-lg">
             <div className="flex pb-8 gap-1">
               {[...Array(5)].map((_, i) => (
@@ -37,7 +34,6 @@ export default function About() {
             </div>
           </div>
   
-          {/* Trusted By - Responsive Layout */}
           <div className="bg-about-blue flex flex-col justify-between p-8 text-lg font-bold rounded-lg">
             <p className="text-gray-500">TRUSTED BY</p>
             <div>
@@ -46,7 +42,6 @@ export default function About() {
             </div>
           </div>
   
-          {/* Image Section - Spans 2 cols on md+ */}
           <div className="bg-about-pink flex items-center justify-center p-1 rounded-lg md:col-span-2">
             <img src="about-pink.jpg" className="w-full h-full object-cover" />
           </div>

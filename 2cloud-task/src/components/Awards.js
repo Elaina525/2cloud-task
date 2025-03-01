@@ -1,10 +1,8 @@
 export default function Awards() {
     return (
         <div className="bg-white px-6 sm:px-16 lg:px-20 py-12">
-            {/* Grid Layout for 3 Sections */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-left w-full">
                 
-                {/* Member of Section */}
                 <div className="w-full">
                     <h3 className="text-gray-500 text-lg font-semibold uppercase mb-4">
                         Member of
@@ -16,7 +14,6 @@ export default function Awards() {
                     </div>
                 </div>
 
-                {/* Proudly Climate Positive */}
                 <div className="w-full">
                     <h3 className="text-gray-500 text-lg font-semibold uppercase mb-4">
                         Proudly Climate Positive
@@ -26,7 +23,6 @@ export default function Awards() {
                     </div>
                 </div>
 
-                {/* 2022 APPA Winner */}
                 <div className="w-full">
                     <h3 className="text-gray-500 text-lg font-semibold uppercase mb-4">
                         2022 APPA Winner
