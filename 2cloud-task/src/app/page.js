@@ -7,6 +7,7 @@ import Categories from "@/components/Categories";
 import About from "@/components/About";
 import Goals from "@/components/Goals";
 import Experience from "@/components/Experience";
+import Steps from "@/components/Steps";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
     <About/>
     <Goals/>
     <Experience/>
+    <Steps/>
     </main>
   );
 }
