@@ -1,9 +1,11 @@
 export default function About() {
     return (
       <div className="bg-gray-100 px-4 sm:px-10 lg:px-20 py-15">
-        <div className="grid grid-cols-4 gap-8 text-left text-black">
+        {/* Responsive Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left text-black">
           
-          <div className="bg-about-green flex flex-col p-10 text-lg font-bold rounded-lg col-span-2 row-span-2">
+          {/* Why Choose Us - Large Block (Spans 2 cols on md+) */}
+          <div className="bg-about-green flex flex-col p-10 text-lg font-bold rounded-lg md:col-span-2 md:row-span-2">
             <h3 className="text-3xl pt-10 pb-8">Why choose Good Things?</h3>
             <p className="pb-6">
               Good Things is reinventing the way brandable promotional products are sourced and ordered.
@@ -16,13 +18,12 @@ export default function About() {
             </button>
           </div>
   
-          <div className="bg-about-purple flex flex-col p-8 text-lg font-bold rounded-lg text-left">
-            <div className="flex pb-8 gap-1 w-12 h-12">
-              <img src="star-yellow.svg" />
-              <img src="star-yellow.svg" />
-              <img src="star-yellow.svg" />
-              <img src="star-yellow.svg" />
-              <img src="star-yellow.svg" />
+          {/* Testimonial Section */}
+          <div className="bg-about-purple flex flex-col p-8 text-lg font-bold rounded-lg">
+            <div className="flex pb-8 gap-1">
+              {[...Array(5)].map((_, i) => (
+                <img key={i} src="star-yellow.svg" className="w-6 h-6" />
+              ))}
             </div>
             <p className="text-xl pb-10">
               "Good Things delivered on point to meet our fast deadline."
@@ -36,7 +37,8 @@ export default function About() {
             </div>
           </div>
   
-          <div className="bg-about-blue flex flex-col justify-between h-full p-8 text-lg font-bold rounded-lg text-left">
+          {/* Trusted By - Responsive Layout */}
+          <div className="bg-about-blue flex flex-col justify-between p-8 text-lg font-bold rounded-lg">
             <p className="text-gray-500">TRUSTED BY</p>
             <div>
               <p className="text-header-blue text-6xl">9,100+</p>
@@ -44,7 +46,8 @@ export default function About() {
             </div>
           </div>
   
-          <div className="bg-about-pink flex items-center justify-center p-1 text-lg font-bold rounded-lg col-span-2">
+          {/* Image Section - Spans 2 cols on md+ */}
+          <div className="bg-about-pink flex items-center justify-center p-1 rounded-lg md:col-span-2">
             <img src="about-pink.jpg" className="w-full h-full object-cover" />
           </div>
         </div>

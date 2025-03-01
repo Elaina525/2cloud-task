@@ -10,6 +10,7 @@ import Experience from "@/components/Experience";
 import Steps from "@/components/Steps";
 import Blog from "@/components/Blog";
 import Awards from "@/components/Awards";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Steps/>
       <Blog/>
       <Awards/>
+      <Footer/>
     </main>
   );
 }
