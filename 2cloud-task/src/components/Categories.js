@@ -1,15 +1,11 @@
 export default function Categories() {
     return (
       <div className="bg-white px-4 sm:px-10 lg:px-20 pb-20">
-        {/* Header Text */}
         <div className="text-xl sm:text-2xl md:text-4xl font-semibold text-center pt-6 sm:pt-10 text-black">
           Promotional Product Categories
         </div>
-  
-        {/* Categories Grid */}
+
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-3">
-          
-          {/* Featured Category */}
           <div className="relative w-full h-auto rounded-xl overflow-hidden bg-blue-300">
             <img
                 src="/categories.png"
@@ -21,7 +17,6 @@ export default function Categories() {
             </div>
         </div>
   
-          {/* Category Items */}
           {[
             "Bags",
             "Caps & Hats",
@@ -51,7 +46,6 @@ export default function Categories() {
         </div>
           ))}
   
-          {/* Custom Merch */}
           <div className="relative col-span-2 w-full h-auto rounded-xl overflow-hidden bg-blue-300 max-h-[150px]">
           <img
             src="/categories.png"

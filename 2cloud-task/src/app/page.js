@@ -5,6 +5,7 @@ import LogoMarquee from "@/components/Marquee";
 import Brands from "@/components/Brands";
 import Categories from "@/components/Categories";
 import About from "@/components/About";
+import Goals from "@/components/Goals";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <Brands/>
     <Categories/>
     <About/>
+    <Goals/>
     </main>
   );
 }
