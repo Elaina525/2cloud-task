@@ -5,22 +5,23 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50">
       {/* Green Announcement Bar */}
       <div className="bg-header-green text-white text-sm flex justify-between items-center px-20 py-2">
-        <a href="#" className="flex font-semibold items-center hover:underline">
-          <img src="/aus.svg" alt="Australian Flag" className="w-5 h-4.5" />
-           Australian-Owned
+        <a href="#" className="flex font-semibold items-center hover:underline gap-2">
+            <img src="/aus.svg" alt="Australian Flag" className="w-5 h-4.5" />
+            Australian-Owned
         </a>
 
         <div className="flex-1 flex justify-center">
-          <a href="#" className="font-semibold text-center hover:underline">
+            <a href="#" className="font-semibold text-center hover:underline">
             Australia's greenest merch company 🌳🌳🌳 See our credentials here
-          </a>
+            </a>
         </div>
 
         <a href="#" className="flex items-center gap-2">
-          <span className="font-semibold text-3xl">G</span>
-          <span className="hover:underline">★★★★★ 290+ Reviews</span>
+            <span className="font-semibold text-3xl">G</span>
+            <span className="hover:underline">★★★★★ 290+ Reviews</span>
         </a>
-      </div>
+        </div>
+
 
       {/* Navigation Bar */}
       <div className="flex items-center justify-between px-20 py-4 bg-white relative">

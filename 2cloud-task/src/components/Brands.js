@@ -8,150 +8,161 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const brandData = [
-    {
-        image: "/product.jpg",
-        title: "Brand1",
-        subtitle: "Product1",
-        logo: "/logo1.png",
-      },
-      {
-        image: "/product.jpg",
-        title: "Brand2",
-        subtitle: "Product2",
-        logo: "/logo2.png",
-      },
-      {
-        image: "/product.jpg",
-        title: "Brand3",
-        subtitle: "Product3",
-        logo: "/logo3.png",
-      },
-      {
-        image: "/product.jpg",
-        title: "Brand4",
-        subtitle: "Product4",
-        logo: "/logo4.png",
-      },  {
-        image: "/product.jpg",
-        title: "Brand5",
-        subtitle: "Product5",
-        logo: "/logo5.png",
-      },
-      {
-        image: "/product.jpg",
-        title: "Brand1",
-        subtitle: "Product1",
-        logo: "/logo1.png",
-      },
-      {
-        image: "/product.jpg",
-        title: "Brand2",
-        subtitle: "Product2",
-        logo: "/logo2.png",
-      },
-      {
-        image: "/product.jpg",
-        title: "Brand3",
-        subtitle: "Product3",
-        logo: "/logo3.png",
-      }
+  {
+    image: "/product.jpg",
+    title: "Brand1",
+    subtitle: "Product1",
+    logo: "/logo1.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand2",
+    subtitle: "Product2",
+    logo: "/logo2.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand3",
+    subtitle: "Product3",
+    logo: "/logo3.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand4",
+    subtitle: "Product4",
+    logo: "/logo4.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand5",
+    subtitle: "Product5",
+    logo: "/logo5.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand1",
+    subtitle: "Product1",
+    logo: "/logo1.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand2",
+    subtitle: "Product2",
+    logo: "/logo2.png",
+  },
+  {
+    image: "/product.jpg",
+    title: "Brand3",
+    subtitle: "Product3",
+    logo: "/logo3.png",
+  },
 ];
 
+const Brands = () => {
+  const sliderRef1 = useRef(null);
+  const sliderRef2 = useRef(null);
 
-const Brands=() => {
+  const handlePrev = useCallback(() => {
+    if (sliderRef1.current) sliderRef1.current.swiper.slidePrev();
+    if (sliderRef2.current) sliderRef2.current.swiper.slidePrev();
+  }, []);
 
-    const sliderRef1 = useRef(null);
-    const sliderRef2 = useRef(null);
-  
-    const handlePrev = useCallback(() => {
-      if (sliderRef1.current) sliderRef1.current.swiper.slidePrev();
-      if (sliderRef2.current) sliderRef2.current.swiper.slidePrev();
-    }, []);
-  
-    const handleNext = useCallback(() => {
-      if (sliderRef1.current) sliderRef1.current.swiper.slideNext();
-      if (sliderRef2.current) sliderRef2.current.swiper.slideNext();
-    }, []);
+  const handleNext = useCallback(() => {
+    if (sliderRef1.current) sliderRef1.current.swiper.slideNext();
+    if (sliderRef2.current) sliderRef2.current.swiper.slideNext();
+  }, []);
 
   return (
-    <div className="w-full mx-auto px-4 py-15 bg-gray-50">
-    <div className="flex items-center justify-between w-full mb-4">
-      <button onClick={handlePrev} className="text-gray-600 hover:text-gray-800 transition">
-        <FaChevronLeft size={20} />
-      </button>
+    <div className="w-full mx-auto py-15 bg-gray-50">
+      {/* Header Section */}
+      <div className="flex items-center justify-between w-full mb-4 px-4">
+        <button onClick={handlePrev} className="text-gray-600 hover:text-gray-800 transition">
+          <FaChevronLeft size={20} />
+        </button>
 
-      <h2 className="text-gray-600 text-lg font-semibold text-center">
-        TRUSTED BY 3000+ BRANDS
-      </h2>
+        <h2 className="text-gray-600 text-lg font-semibold text-center">
+          TRUSTED BY 3000+ BRANDS
+        </h2>
 
-      <button onClick={handleNext} className="text-gray-600 hover:text-gray-800 transition">
-        <FaChevronRight size={20} />
-      </button>
-    </div>
-    <Swiper
-        ref={sliderRef1}
-        modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerGroup={4}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-        className="pb-6"
-      >
-        {brandData.map((brand, index) => (
-          <SwiperSlide key={index} className="flex flex-col">
-            <div className="rounded-xl overflow-hidden shadow-lg bg-white">
-              <img
-                src={brand.image}
-                alt={brand.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4 text-black">
-                <h3 className="font-semibold text-2xl">{brand.title}</h3>
-                <p className="text-md">{brand.subtitle}</p>
-                <div className="mt-2 flex justify-end">
-                  <img src={brand.logo} alt={`${brand.title} logo`} className="h-6" />
+        <button onClick={handleNext} className="text-gray-600 hover:text-gray-800 transition">
+          <FaChevronRight size={20} />
+        </button>
+      </div>
+
+      {/* First Swiper */}
+      <div className="pb-6">
+        <Swiper
+          ref={sliderRef1}
+          modules={[Navigation]}
+          spaceBetween={10} // Reduce space between cards for better responsiveness
+          slidesPerGroup={2}
+          breakpoints={{
+            480: { slidesPerView: 1 }, // 1 card per row on small screens
+            768: { slidesPerView: 2 }, // 2 cards per row on tablets
+            1024: { slidesPerView: 3 }, // 3 cards per row on medium screens
+            1280: { slidesPerView: 4 }, // 4 cards per row on large screens
+          }}
+          className="ml-6"
+        >
+          {brandData.map((brand, index) => (
+            <SwiperSlide key={index} className="flex flex-col">
+              <div className="rounded-xl overflow-hidden bg-white max-w-sm sm:max-w-xs md:max-w-md mx-auto">
+                <img
+                  src={brand.image}
+                  alt={brand.title}
+                  className="w-full h-auto aspect-[4/3] object-cover"
+                />
+                <div className="p-2 sm:p-3 md:p-4 text-black flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-xl sm:text-lg md:text-2xl">{brand.title}</h3>
+                    <p className="text-sm sm:text-md">{brand.subtitle}</p>
+                  </div>
+                  <img src={brand.logo} alt={`${brand.title} logo`} className="h-12 sm:h-10 md:h-16" />
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Swiper
-        ref={sliderRef2}
-        modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerGroup={4}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-        className="pb-6"
-      >
-        {brandData.map((brand, index) => (
-          <SwiperSlide key={index} className="flex flex-col">
-            <div className="rounded-xl overflow-hidden shadow-lg bg-white">
-              <img
-                src={brand.image}
-                alt={brand.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4 text-black">
-                <h3 className="font-semibold text-2xl">{brand.title}</h3>
-                <p className="text-md">{brand.subtitle}</p>
-                <div className="mt-2 flex justify-end">
-                  <img src={brand.logo} alt={`${brand.title} logo`} className="h-6" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Second Swiper */}
+      <div>
+        <Swiper
+          ref={sliderRef2}
+          modules={[Navigation]}
+          spaceBetween={10} // Reduce spacing for better scaling
+          slidesPerGroup={2}
+          initialSlide={2}
+          breakpoints={{
+            480: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          className="pb-6 mt-[-40px]" // Moves second swiper up slightly for staggered effect
+        >
+          {brandData.map((brand, index) => (
+            <SwiperSlide key={index} className="flex flex-col">
+              <div className="rounded-xl overflow-hidden bg-white max-w-sm sm:max-w-xs md:max-w-md mx-auto">
+                <img
+                  src={brand.image}
+                  alt={brand.title}
+                  className="w-full h-auto aspect-[4/3] object-cover"
+                />
+                <div className="p-2 sm:p-3 md:p-4 text-black flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-xl sm:text-lg md:text-2xl">{brand.title}</h3>
+                    <p className="text-sm sm:text-md">{brand.subtitle}</p>
+                  </div>
+                  <img src={brand.logo} alt={`${brand.title} logo`} className="h-12 sm:h-10 md:h-16" />
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
-}
+};
 
 export default Brands;

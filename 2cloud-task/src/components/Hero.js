@@ -65,12 +65,12 @@ const Hero3 = () => (
   >
     <div className="container mx-auto px-6 lg:px-60 flex flex-col lg:flex-row items-center">
       <div className="text-black max-w-sm text-left lg:ml-10">
-        <h1 className="text-4xl lg:text-6xl font-bold">It&apos;s <span className="text-header-green">Good </span>
+        <h1 className="text-2xl lg:text-5xl font-bold">It&apos;s <span className="text-header-green">Good </span>
             <br/>
             to be green</h1>
-        <p className="mt-4 text-lg">
-          We&apos;re a member of <span className="text-header-blue">1% for the Planet</span> for our{" "}
-          <span className="text-header-blue">Good Range</span> of products, donating 1% of sales to environmental partners.
+        <p className="mt-4 text-lg max-w-64">
+          We&apos;re a member of <span className="underline">1% for the Planet</span> for our{" "}
+          <span className="text-header-green">Good Range</span> of products, donating 1% of sales to environmental partners.
         </p>
         <button className="bg-header-green hover:bg-green-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold">
           Browse the Good Range
