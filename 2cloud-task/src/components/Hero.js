@@ -7,13 +7,11 @@ import "swiper/css/pagination";
 
 const Hero1 = () => (
     <section className="flex min-h-[500px] w-full">
-      {/* Left Background Image */}
       <div
         className="w-1/4 bg-cover bg-center"
         style={{ backgroundImage: "url('/hero1.jpg')", backgroundPosition: 'right' }}
       />
   
-      {/* Center Solid Color */}
       <div className="w-1/2 bg-hero-blue flex items-center justify-center text-center py-4">
             <div className="text-black">
             <p className="text-3xl lg:text-4xl font-bold">

@@ -8,6 +8,7 @@ import About from "@/components/About";
 import Goals from "@/components/Goals";
 import Experience from "@/components/Experience";
 import Steps from "@/components/Steps";
+import Blog from "@/components/Blog";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
     <Goals/>
     <Experience/>
     <Steps/>
+    <Blog/>
     </main>
   );
 }
