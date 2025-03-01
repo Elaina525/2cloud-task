@@ -9,20 +9,22 @@ import Goals from "@/components/Goals";
 import Experience from "@/components/Experience";
 import Steps from "@/components/Steps";
 import Blog from "@/components/Blog";
+import Awards from "@/components/Awards";
 
 export default function Home() {
   return (
     <main className="pt-30">
-    <Header/>
-    <Hero/>
-    <LogoMarquee/>
-    <Brands/>
-    <Categories/>
-    <About/>
-    <Goals/>
-    <Experience/>
-    <Steps/>
-    <Blog/>
+      <Header/>
+      <Hero/>
+      <LogoMarquee/>
+      <Brands/>
+      <Categories/>
+      <About/>
+      <Goals/>
+      <Experience/>
+      <Steps/>
+      <Blog/>
+      <Awards/>
     </main>
   );
 }
