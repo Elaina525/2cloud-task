@@ -6,6 +6,7 @@ import Brands from "@/components/Brands";
 import Categories from "@/components/Categories";
 import About from "@/components/About";
 import Goals from "@/components/Goals";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
     <Categories/>
     <About/>
     <Goals/>
+    <Experience/>
     </main>
   );
 }

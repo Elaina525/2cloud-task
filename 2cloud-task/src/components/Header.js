@@ -16,9 +16,14 @@ export default function Header() {
             </a>
         </div>
 
-        <a href="#" className="flex items-center gap-2">
-            <span className="font-semibold text-3xl">G</span>
-            <span className="hover:underline">★★★★★ 290+ Reviews</span>
+        <a href="#" className="flex items-center">
+        <img src="google-g.svg" className="max-h-5 pr-1" />
+        <img src="star-white.svg" className="max-h-5" />
+        <img src="star-white.svg" className="max-h-5" />
+        <img src="star-white.svg" className="max-h-5" />
+        <img src="star-white.svg" className="max-h-5" />
+        <img src="star-white.svg" className="max-h-5 pr-2" />
+            <span className="hover:underline">290+ Reviews</span>
         </a>
         </div>
 
@@ -26,7 +31,7 @@ export default function Header() {
       {/* Navigation Bar */}
       <div className="flex items-center justify-between px-20 py-4 bg-white relative">
         {/* Logo */}
-        <h1 className="text-3xl font-bold text-blue-600">good things</h1>
+        <img src="logo.svg" className="max-h-8" />
 
         {/* Navigation Links */}
         <nav className="flex items-center space-x-10 text-blue-600 font-semibold">
